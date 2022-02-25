@@ -189,7 +189,7 @@ footer {
 }
 
 .itemShop{
-   height: 400px;
+   height: 300px;
    /* width: 80px; */
    object-fit: contain;
    overflow-y: scroll;
