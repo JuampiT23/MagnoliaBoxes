@@ -12,6 +12,8 @@ body{
    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.87), lightgray);
 }
 
+
+
 .Menubar ul{
    display: inline-flexbox;
    padding-right: 10px;
@@ -52,6 +54,11 @@ form {align-items: flex-start;}
    width: 100%;
 }
 
+#logoFull{
+   height: 100%;
+   width: 100%;
+}
+
 .imgHome {
    list-style-type: none;
    display: inline-flexbox;
@@ -82,8 +89,16 @@ footer {background-color: rgba(119, 119, 119, 0.384);}
 
 #whatssButton{
    position: sticky;
+   max-width: 30px;
+   max-height: 30px;
+   align-content: center;
+   background-image: none;
    right: 10px;
    bottom: 30px;
+}
+.wspButton{
+   max-width: 30px;
+   max-height: 30px;
 }
 
 .buyImgShop{
