@@ -189,18 +189,12 @@ footer {
 }
 
 .itemShop{
-   display: grid;
-   height: 100%;
-   width: 100%;
-   overflow-x: scroll;
-   scroll-behavior: smooth;
-   scrollbar-width: none;
-   border-style: groove;
-   text-align: justify;
-      grid-template-columns: 1fr;
-      grid-template-rows: 100% 50%;
-      grid-template-areas: "foto 1"
-                           "texto 1";                 
+   height: 400px;
+   /* width: 80px; */
+   object-fit: contain;
+   overflow-y: scroll;
+   /* text-align: justify; */
+   
 }
 
 h3{
