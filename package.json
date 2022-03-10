@@ -6,8 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-css": "node-sass --include-path scss scss/Style.scss css/Stilo.css",
-"watch-css": "nodemon -e scss -x \"npm run build-css\""
-
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
   },
   "repository": {
     "type": "git",
@@ -22,5 +21,8 @@
   "devDependencies": {
     "node-sass": "^7.0.1",
     "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.2"
   }
 }
