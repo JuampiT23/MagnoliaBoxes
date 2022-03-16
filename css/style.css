@@ -139,20 +139,16 @@ footer {
    width: 100%;
    object-fit: contain;
       grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: 400px;
-      grid-template-areas:  "texto 1" "foto 1" "foto 2";
+      grid-template-rows: 100px;
+      grid-template-areas:  "texto 1";
       justify-items: center;
 }
 
 .textGridHome{
-   display: flexbox;
-   height: 100%;
+   display: inline-flex;
+   max-inline-size: 500px;
    width: 100%;
-   object-fit: contain;
-      grid-template-columns: 1fr;
-      grid-template-rows: 50px 350px;
-      grid-template-areas: "texto 1"
-                           "texto 2"
+   object-fit: fill;
 }
 
 .gridShop{
