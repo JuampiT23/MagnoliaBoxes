@@ -1,3 +1,17 @@
+.textLooks, .textTitle, .textParr {
+   font-size: 40px;
+   text-align: center;
+   padding-top: 20px;
+   padding-bottom: 20px;
+   font-family: Verdana, Geneva, Tahoma, sans-serif; }
+
+   .textTitle {
+      color: #d15858; }
+
+   .textParr {
+      color: black; }
+
+
 /* :root{
    
 } */
@@ -12,14 +26,16 @@ nav{
 body{
    max-height: fit-content;
    max-width: 100%;
+   
 }
 
 .backPage{
    height: auto;
-   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.87), lightgray);
+   background-image: url("../img/MarbleBack.jpg");
+   background-size: cover;
+   background-repeat:no-repeat;
+   background-position: center center;
 }
-
-
 
 .Menubar ul{
    display: inline-flexbox;
@@ -49,7 +65,6 @@ body{
 li:active{
    transition: 1s all;
    /* TRANSISION HIDE */
-
 }
 
 ol {list-style-type: circle;}
@@ -62,10 +77,12 @@ form {align-items: flex-start;}
 
 .Logoone {
    list-style-type: none;
-   position: relative;
-   background-color: white;
-   height: 300px;
+   display: flexbox;
    width: 100%;
+   object-fit: contain;
+   background-color: rgb(251,238,230);
+   height: 300px;
+   align-items: center;
 }
 
 #logoFull{
@@ -104,26 +121,11 @@ footer {
    position: relative;
    padding: 20px;
    margin: 10px;
-
 }
 
 .imageCarr{
    max-width: 100%;
    max-height: 100%;
-}
-
-#whatssButton{
-   position: sticky;
-   max-width: 30px;
-   max-height: 30px;
-   align-content: center;
-   background-image: none;
-   right: 10px;
-   bottom: 30px;
-}
-.wspButton{
-   max-width: 30px;
-   max-height: 30px;
 }
 
 .buyImgShop{
@@ -208,10 +210,8 @@ footer {
 
 .itemShop{
    height: 300px;
-   /* width: 80px; */
    object-fit: contain;
    overflow-y: scroll;
-   /* text-align: justify; */
 }
 
 h3{
@@ -224,25 +224,21 @@ p{
    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-
-
-
-h5:hover{
+/* h5:hover{
    color: blue;
    text-transform: uppercase;
    height: 300px;
    width: 300px;
-}
+} */
 
 input:focus{
-   background-color: gold;
+   background-color: rgb(251,238,230);
 }
 
 h6:focus{
    color: blue;
-   background-color: gold;
+   background-color: rgb(251,238,230);
 }
-
 
 
 /* XS SM */
