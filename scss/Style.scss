@@ -1,39 +1,46 @@
 @import "variables.scss";
 
 
-.textLooks{
-    font-size:40px;
-    text-align: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+@mixin textLooks ($fontColor, $fontWeight, $fontSize){
 
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: $fontFirst;
+    color: $basicColor;
+    font-weight: 400px;
+    font-size: $fontSize;
 }
 
 .textTitle{
-    @extend .textLooks;
-    color: $TitleColor;
+    @include textLooks ($textColor, 500px, 35px)
 }
 
 .textParr{
-    @extend .textLooks;
-    color: $TextColor;
+    @include textLooks ($basicColor, 400px, 15px)
+}
+
+.txtImportant{
+    @include textLooks ($basicColor, 500px, 20px)
+}
+
+.txtButton{
+    @include textLooks ($textColor, 400px, 20px)
 }
 
 nav{
+    max-width: $maxWidth;
     position: sticky;
     top: 0px;
-    max-width: 100%;
     z-index: 1000;
   }
-  
+
 body{
     max-height: fit-content;
-    max-width: 100%;
+    max-width: $maxWidth;
   }
 
 footer {
-    max-width: 100%;
+    max-width: $maxWidth;
     background-color: rgba(119, 119, 119, 0.384);
     font-family: $fontFirst;
  }
@@ -44,16 +51,18 @@ li:active{
     transition: 4s all;
     opacity: 100%;
 }
-  
-ol {list-style-type: circle;}
-  
+
+ol {
+    list-style-type: circle;
+}
+
 form {
     align-items: flex-start;
     font-family: $fontFirst;
     font-weight: 500;
-    
+
     background-color: $backColor;
-   
+
 }
 
 textarea:focus{
@@ -78,31 +87,19 @@ button:hover{
 }
 
 h2{
-    font-family: $fontFirst;
-    font-weight: 800;
-    background-color: $backColor;
-    color: $TitleColor;
+    @extend .textTitle;
 }
 
 h4{
-    font-family: Arial, Helvetica, sans-serif;
+    @extend .txtImportant;
 }
 
 h3{
-    font-family: $fontFirst;
+    @extend .textParr;
  }
 
-/* h5:hover{
-  color: blue;
-  text-transform: uppercase;
-  height: 300px;
-  width: 300px;
-} */
-
-
 p{
-    font-size: 20px;
-    font-family: $fontFirst;
+    @extend .textParr;
  }
 pre{
     @extend p;
@@ -129,7 +126,7 @@ a:hover {
     background-repeat:no-repeat;
     background-position: center center;
   }
-  
+
 .Menubar ul{
     display: inline-flexbox;
     padding-right: 10px;
@@ -137,11 +134,11 @@ a:hover {
     padding-bottom: 10px;
     padding-top: 10px;
     margin-top: 90px;
-    background-color: white; 
+    background-color: white;
     color: $textColor;
     align-items: center;
   }
-  
+
 .Menubar li{
     list-style-type: none;
     display: inline;
@@ -176,16 +173,9 @@ a:hover {
   }
 
 .textGridHome{
-    display: flexbox;
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
-       grid-template-columns: 1fr;
-       grid-template-rows: 50px 350px;
-       grid-template-areas: "texto 1"
-                            "texto 2"
+    max-width: 400px;
   }
-  
+
 .gridExpTxt{
     display: grid;
     align-content: center;
@@ -232,7 +222,7 @@ a:hover {
        align-content: space-around;
     }
   }
-  
+
   /* md */
   @media only screen and (mid-width: 600px) {
     .gridShop{
@@ -247,8 +237,8 @@ a:hover {
                             "foto 5" "foto 6";
        align-content: space-around;
   }}
-  
-  
+
+
   /* lg */
   @media only screen and (mid-width: 992px) {
     .gridShop{
@@ -260,5 +250,5 @@ a:hover {
        grid-template-rows: 300px 300px;
        grid-template-areas:  "foto 1" "foto 2" "foto 3"
                              "foto 4" "foto 5" "foto 6";
-       align-content: space-around; 
+       align-content: space-around;
   }}
